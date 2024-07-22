@@ -1,0 +1,45 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "javac -sourcepath java/ java/${fileBasename}"
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "command": "cd java;java ${fileBasenameNoExtension}"
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++ build active file",
+            "command": "g++.exe",
+            "args": [                
+                "-fdiagnostics-color=always",
+                "-g",
+                "*.cpp",
+                "-o",
+                "${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "compiler: D:\\PortableApps\\VSCodePortable\\Data\\msys64\\ucrt64\\bin\\g++.exe"
+        },
+        {
+            "label": "C/C++run active file",
+            "command": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "problemMatcher": []
+        }
+    ]
+}

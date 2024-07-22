@@ -1,0 +1,40 @@
+<diagram program="umletino" version="15.1"><zoom_level>11</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>275</x><y>132</y><w>187</w><h>121</h></coordinates><panel_attributes>*Duck*
+{abstract}
+--
+# flyBehavior: FlyBehavior
+--
+/+ display(): void/
++ swim(): void
++ performFly(): void
+
+
+bg=cyan</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>275</x><y>341</y><w>187</w><h>77</h></coordinates><panel_attributes>*MallardDuck*
+--
+--
++ display(): void
++ swim(): void
+
+
+bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>506</x><y>88</y><w>484</w><h>77</h></coordinates><panel_attributes>     La méthode performFly() se comporte de manière polymorphique.
+     La classe MallardDuck doit juste instancier l'interface qui correspond 
+     au comportement désiré (ici cela est fait par le constructeur de la classe 
+     MallardDuck. 
+     
+     
+_umletcode=
+fg=red; bg=red;
+drawArc(5,5,10,50,50,80,false)  //Parameters (x, y, width, height, start, extent, open)
+drawCircle(10,40,3) //Parameters (x, y, radius)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>352</x><y>242</y><w>33</w><h>121</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>143</x><y>44</y><w>869</w><h>682</h></coordinates><panel_attributes>*Author: Franck - Source: Head First Design Pattern §1*</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>693</x><y>341</y><w>187</w><h>77</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+*FlyBehavior*
+--
+--
++ fly(): void
+
+
+bg=cyan</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>693</x><y>484</y><w>187</w><h>77</h></coordinates><panel_attributes>*FlyWithWings*
+--
+--
++ fly(): void
+
+
+bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>770</x><y>407</y><w>33</w><h>99</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>374</x><y>407</y><w>341</w><h>143</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;290;110</additional_attributes></element></diagram>
